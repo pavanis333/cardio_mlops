@@ -1,6 +1,6 @@
 FROM docker.io/pavani333/deeplearning
 
-ADD cardio.h5
+ADD cardio.h5 /
 
 ADD app.py /
 
