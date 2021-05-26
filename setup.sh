@@ -1,5 +1,5 @@
 yum install -y utils
-yum-config-manager --ad-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
 yum install -y terraform
 yum install -y docker
 systemctl start docker
