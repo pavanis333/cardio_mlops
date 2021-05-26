@@ -20,3 +20,7 @@ variable "cluster_name" {
 variable "service_name" {
     default = "diabetes_service"
 }
+
+variable "port" {
+    default = 80
+}
