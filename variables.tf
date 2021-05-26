@@ -2,7 +2,7 @@ variable "aws_region" {
   default = "us-east-1"
 }
 variable "image_name" {
-  default = "deeplearning"
+  default = "cardio_deeplearning"
 }
 
 variable "container_engine" {
@@ -10,15 +10,15 @@ variable "container_engine" {
 }
 
 variable "container_name" {
-    default = "diabetes"
+    default = "cardio"
 }
 
 variable "cluster_name" {
-    default = "diabetes_cluster"
+    default = "cardio_cluster"
 }
 
 variable "service_name" {
-    default = "diabetes_service"
+    default = "cardio_service"
 }
 
 variable "port" {

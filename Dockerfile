@@ -1,5 +1,7 @@
 FROM docker.io/library/centos
 
+ADD cardio.h5
+
 ADD app.py /
 
 ADD templates /templates

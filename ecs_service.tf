@@ -1,6 +1,6 @@
 resource "aws_ecs_service" "deeplearning_service" {
-        depends_on      = [aws_lb_listener.cluster_lb_listener, aws_iam_role_policy_attachment.ecs_task_execution_role]
-        name            = var.service_name
+    depends_on      = [aws_lb_listener.cluster_lb_listener, aws_iam_role_policy_attachment.ecs_task_execution_role]
+	name            = var.service_name
   	cluster         = aws_ecs_cluster.deeplearning_cluster.id
   	task_definition = aws_ecs_task_definition.deeplearning_task_definition.arn
   	desired_count   = 2

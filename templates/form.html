@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Diabetes Prediction</title>
-    <h1>Enter the values to know your diabetes status</h1>
+    <center>
+        <h1>Enter the values to know your diabetes status</h1>
+    </center>
 
     <!-- CSS -->
     <style>
@@ -30,7 +32,7 @@
         .myForm legend,
         .myForm label {
             padding: 0;
-            font-weight: bold;
+            /* font-weight: bold;*/
         }
 
         .myForm label.choice {
@@ -66,6 +68,11 @@
             background: #ccc;
             cursor: pointer;
         }
+
+        .heading {
+
+            font-weight: bold;
+        }
     </style>
 
 </head>
@@ -75,84 +82,86 @@
         <form class="myForm" action='/output' method="GET">
 
             <p>
-                <label>Age in years
-                    <input type="text" name="p1" required>
-                </label>
+                <label class="heading">Age in years</label>
+                <input type="text" name="age" required>
+
             </p>
 
             <p>
-                <label>Select your gender</label><br>
-                <input type="radio" id="male" name="gender" value=1>
-                <label for="male">Male</label><br>
-                <input type="radio" id="female" name="gender" value=2>
+                <label class="heading">Select your gender</label><br>
+                <input type="radio" name="gender" value=1>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value=2>
                 <label for="female">Female</label><br>
+
+
             </p>
 
             <p>
-                <label>Enter your height in (cm)
-                    <input type="text" name="p3" required>
-                </label>
+                <label class="heading">Enter your height in (cm) </label>
+                <input type="text" name="height" required>
+
             </p>
 
             <p>
-                <label>Enter your weight in (kg)
-                    <input type="text" name="p4" required>
-                </label>
+                <label class="heading">Enter your weight in (kg) </label>
+                <input type="text" name="weight" required>
+
             </p>
 
             <p>
-                <label>Enter your systolic blood pressure
-                    <input type="text" name="p5" required>
-                </label>
+                <label class="heading">Enter your systolic blood pressure </label>
+                <input type="text" name="systolic" required>
+
             </p>
 
             <p>
-                <label>Enter you diastolic blood pressure
-                    <input type="text" name="p6" required>
-                </label>
+                <label class="heading">Enter you diastolic blood pressure</label>
+                <input type="text" name="diastolic" required>
+
             </p>
 
             <p>
-                <label>Select your Cholesterol level</label><br>
-                <input type="radio" id="normal" name="cholesterol" value=1>
-                <label for="normal">Normal</label><br>
-                <input type="radio" id="high" name="cholesterol" value=2>
-                <label for="high">High</label><br>
-                <input type="radio" id="very_high" name="cholesterol" value=3>
+                <label class="heading">Select your Cholesterol level</label><br>
+                <input type="radio" name="cholesterol" value=1>
+                <label for="normal">Normal</label>
+                <input type="radio" name="cholesterol" value=2>
+                <label for="high">High</label>
+                <input type="radio" name="cholesterol" value=3>
                 <label for="very_high">Very High</label><br>
             </p>
 
             <p>
-                <label>Select your Glucose level</label><br>
-                <input type="radio" id="normal" name="cholesterol" value=1>
-                <label for="normal">Normal</label><br>
-                <input type="radio" id="high" name="cholesterol" value=2>
-                <label for="high">High</label><br>
-                <input type="radio" id="very_high" name="cholesterol" value=3>
+                <label class="heading">Select your Glucose level</label><br>
+                <input type="radio" name="glucose" value=1>
+                <label for="normal">Normal</label>
+                <input type="radio" name="glucose" value=2>
+                <label for="high">High</label>
+                <input type="radio" name="glucose" value=3>
                 <label for="very_high">Very High</label><br>
             </p>
 
             <p>
-                <label>Do you smoke Ciggarette</label><br>
-                <input type="radio" id="yes" name="glucose" value=1>
-                <label for="yes">YES</label><br>
-                <input type="radio" id="no" name="glucose" value=0>
+                <label class="heading">Do you smoke Ciggarette</label><br>
+                <input type="radio" name="smoke" value=1>
+                <label for="yes">YES</label>
+                <input type="radio" name="smoke" value=0>
                 <label for="yes">NO</label><br>
             </p>
 
             <p>
-                <label>Do you consume Alcohol</label><br>
-                <input type="radio" id="yes" name="alcohol" value=1>
-                <label for="yes">YES</label><br>
-                <input type="radio" id="no" name="alcohol" value=0>
+                <label class="heading">Do you consume Alcohol</label><br>
+                <input type="radio" name="alcohol" value=1>
+                <label for="yes">YES</label>
+                <input type="radio" name="alcohol" value=0>
                 <label for="no">NO</label><br>
             </p>
 
             <p>
-                <label>Daily physical activity</label><br>
-                <input type="radio" id="yes" name="activity" value=1>
-                <label for="yes">YES</label><br>
-                <input type="radio" id="no" name="alcohol" value=0>
+                <label class="heading">Daily physical activity</label><br>
+                <input type="radio" name="activity" value=1>
+                <label for="yes">YES</label>
+                <input type="radio" name="alcohol" value=0>
                 <label for="no">NO</label><br>
             </p>
 
