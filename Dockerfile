@@ -1,9 +1,5 @@
 FROM docker.io/library/centos
 
-ADD pima_indians_diabetes.py / 
-
-ADD pima_indians_diabetes.csv /
-
 ADD app.py /
 
 ADD templates /templates
@@ -28,6 +24,6 @@ RUN pip3 install tensorflow
 
 EXPOSE 80
 
-CMD ["pima_indians_diabetes.py"]
+CMD ["app.py"]
 
 ENTRYPOINT ["python3"]
