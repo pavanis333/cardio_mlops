@@ -1,7 +1,7 @@
 from keras.models  import load_model
 from flask import Flask, render_template, request
 
-app = Flask("dismodelapp")
+app = Flask("cardio_app")
 model  =  load_model("pima_indians_diabetes_model.h5")
 
 @app.route("/home")

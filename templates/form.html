@@ -1,128 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Diabetes Prediction</title>
-<h1>Enter the values to know your diabetes status</h1>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Diabetes Prediction</title>
+    <h1>Enter the values to know your diabetes status</h1>
 
-<!-- CSS -->
-<style>
-.myForm {
-font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-font-size: 0.8em;
-width: 20em;
-padding: 1em;
-border: 1px solid #ccc;
-}
+    <!-- CSS -->
+    <style>
+        .myForm {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-size: 0.8em;
+            width: 20em;
+            padding: 1em;
+            border: 1px solid #ccc;
+        }
 
-.myForm * {
-box-sizing: border-box;
-}
+        .myForm * {
+            box-sizing: border-box;
+        }
 
-.myForm fieldset {
-border: none;
-padding: 0;
-}
+        .myForm fieldset {
+            border: none;
+            padding: 0;
+        }
 
-.myForm legend,
-.myForm label {
-padding: 0;
-font-weight: bold;
-}
+        .myForm legend,
+        .myForm label {
+            padding: 0;
+            font-weight: bold;
+        }
 
-.myForm label.choice {
-font-size: 0.9em;
-font-weight: normal;
-}
+        .myForm label.choice {
+            font-size: 0.9em;
+            font-weight: normal;
+        }
 
-.myForm input[type="text"],
-.myForm select,
-.myForm textarea {
-display: block;
-width: 100%;
-border: 1px solid #ccc;
-font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-font-size: 0.9em;
-padding: 0.3em;
-}
+        .myForm input[type="text"],
+        .myForm select,
+        .myForm textarea {
+            display: block;
+            width: 100%;
+            border: 1px solid #ccc;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-size: 0.9em;
+            padding: 0.3em;
+        }
 
-.myForm textarea {
-height: 100px;
-}
+        .myForm textarea {
+            height: 100px;
+        }
 
-.myForm button {
-padding: 1em;
-border-radius: 0.5em;
-background: #eee;
-border: none;
-font-weight: bold;
-margin-top: 1em;
-}
+        .myForm button {
+            padding: 1em;
+            border-radius: 0.5em;
+            background: #eee;
+            border: none;
+            font-weight: bold;
+            margin-top: 1em;
+        }
 
-.myForm button:hover {
-background: #ccc;
-cursor: pointer;
-}
-</style>
+        .myForm button:hover {
+            background: #ccc;
+            cursor: pointer;
+        }
+    </style>
 
 </head>
+
 <body>
+    <center>
+        <form class="myForm" action='/output' method="GET">
 
-<form class="myForm" action='/output'  method="GET">
+            <p>
+                <label>Age in years
+                    <input type="text" name="p1" required>
+                </label>
+            </p>
 
-<p>
-<label>Number of times prregnant
-<input type="text" name="p1" required>
-</label> 
-</p>
+            <p>
+                <label>Select your gender</label><br>
+                <input type="radio" id="male" name="gender" value=1>
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value=2>
+                <label for="female">Female</label><br>
+            </p>
 
-<p>
-<label>Plasma glucose concentration
-<input type="text" name="p2" required>
-</label>
-</p>
+            <p>
+                <label>Enter your height in (cm)
+                    <input type="text" name="p3" required>
+                </label>
+            </p>
 
-<p>
-<label>Diastolic blood pressure (mm Hg)
-<input type="text" name="p3" required>
-</label>
-</p>
-	
-<p>
-<label>Triceps skin fold thickness (mm)
-<input type="text" name="p4" required>
-</label>
-</p>
+            <p>
+                <label>Enter your weight in (kg)
+                    <input type="text" name="p4" required>
+                </label>
+            </p>
 
-<p>
-<label>2-Hour Serum insulin (muU/ml)
-<input type="text" name="p5" required>
-</label>
-</p>
+            <p>
+                <label>Enter your systolic blood pressure
+                    <input type="text" name="p5" required>
+                </label>
+            </p>
 
-<p>
-<label>Body mass index
-<input type="text" name="p6" required>
-</label>
-</p>
+            <p>
+                <label>Enter you diastolic blood pressure
+                    <input type="text" name="p6" required>
+                </label>
+            </p>
 
-<p>
-<label>Diabetes pedigree function
-<input type="text" name="p7" required>
-</label>
-</p>
+            <p>
+                <label>Select your Cholesterol level</label><br>
+                <input type="radio" id="normal" name="cholesterol" value=1>
+                <label for="normal">Normal</label><br>
+                <input type="radio" id="high" name="cholesterol" value=2>
+                <label for="high">High</label><br>
+                <input type="radio" id="very_high" name="cholesterol" value=3>
+                <label for="very_high">Very High</label><br>
+            </p>
 
-<p>
-<label>Age
-<input type="text" name="p8" required>
-</label>
-</p>
+            <p>
+                <label>Select your Glucose level</label><br>
+                <input type="radio" id="normal" name="cholesterol" value=1>
+                <label for="normal">Normal</label><br>
+                <input type="radio" id="high" name="cholesterol" value=2>
+                <label for="high">High</label><br>
+                <input type="radio" id="very_high" name="cholesterol" value=3>
+                <label for="very_high">Very High</label><br>
+            </p>
 
-<p><input type='submit' /></p>
+            <p>
+                <label>Do you smoke Ciggarette</label><br>
+                <input type="radio" id="yes" name="glucose" value=1>
+                <label for="yes">YES</label><br>
+                <input type="radio" id="no" name="glucose" value=0>
+                <label for="yes">NO</label><br>
+            </p>
 
-</form>
+            <p>
+                <label>Do you consume Alcohol</label><br>
+                <input type="radio" id="yes" name="alcohol" value=1>
+                <label for="yes">YES</label><br>
+                <input type="radio" id="no" name="alcohol" value=0>
+                <label for="no">NO</label><br>
+            </p>
 
+            <p>
+                <label>Daily physical activity</label><br>
+                <input type="radio" id="yes" name="activity" value=1>
+                <label for="yes">YES</label><br>
+                <input type="radio" id="no" name="alcohol" value=0>
+                <label for="no">NO</label><br>
+            </p>
+
+            <p><input type='submit' /></p>
+
+        </form>
+    </center>
 </body>
+
 </html>
