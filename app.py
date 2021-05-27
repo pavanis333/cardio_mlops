@@ -22,7 +22,7 @@ def dia():
         x10 = request.args.get("alcohol")
         x11 = request.args.get("activity")
         
-        output = model.predict([[ int(x1) , int(x2) , int(x3),  int(x4), int(x5), int(x6), int(x7), int(x8), int(x9), int(x10), int(x11) ]])
+        output = model.predict([[ int(x1) , int(x2) , int(x3),  float(x4), int(x5), int(x6), int(x7), int(x8), int(x9), int(x10), int(x11) ]])
         
         if (round(output[0][0])) == 1:
             return render_template("positive.html")
